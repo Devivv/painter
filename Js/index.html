@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Painter</title>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="https://www.cv.devivv.com/">Retour à Devivv.com</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.linkedin.com/in/vivien-michot/">Linkedin</a>
+                </li>
+              <!-- <li class="nav-item">
+                <a class="nav-link" href="#">Code source de la page</a>
+              </li> -->
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <h1 class="text-center my-3">Générer une "oeuvre" en PHP. (v1)</h1>
+    <h2 id="message" style="color:red" class="text-center h1 mb-2"></h2>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-7">
+                <div class="text-center">
+                    <h4 class="my-3"> Cliquez sur les cases pour les colorier. </h4>
+                    <canvas id="grid" width="900" height="900"></canvas>
+                    <h2 id="boxInfo"></h2>
+                    <div class="text-center my-4">
+                        <h4 class="my-3"> Générez une image de 300 pixels sur 300 de votre oeuvre. </h4>
+                        <button id="generateButton" class="btn btn-primary">Générer une image</button>
+                        <iframe id="imageDownload" style="display:none;"></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <h4 class="my-3">Cliquez ou glissez votre souris sur les jauges pour changer la couleur selectionée.</h4>
+                <canvas id="R_picker" width="400" height="50"></canvas>
+                <canvas id="G_picker" width="400" height="50"></canvas>
+                <canvas id="B_picker" width="400" height="50"></canvas>
+
+                <div  class="my-5">
+                    <p>Couleur Selectionée</p>
+                    <canvas id="colorSelect" width="50" height="50"></canvas>
+                </div>
+                <div class="text-center">
+                    <h4 id="messageFinal" style="color:green"></h4>
+                    <img id="imageFinal" src="" alt="">
+                </div>
+            </div>
+    </div>
+    
+
+
+</body>
+<script type="text/javascript" src="thepainter.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+</html>
